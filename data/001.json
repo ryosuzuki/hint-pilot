@@ -1,0 +1,9 @@
+{
+  "category": "repeated",
+  "location": "There is a mistake in line 2",
+  "type": "---",
+  "syntax": "You’re missing n == 0 condition",
+  "name": "Check the variable n",
+  "data": "repeated(square, 3)(5) -> 25",
+  "behavior": "Consider repeated(square, 3), This function loops 3 times, but your code loops 2 times"
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React App</title>
+
+    <link rel="stylesheet" href="bower_components/semantic-ui/dist/semantic.css">
+    <link rel="stylesheet" href="bower_components/prism/themes/prism.css">
+    <link rel="stylesheet" href="bower_components/prism/plugins/line-highlight/prism-line-highlight.css">
+    <!-- <link rel="stylesheet" href="node_modules/rc-slider/assets/index.css"> -->
+    <!-- <link rel="stylesheet" href="node_modules/codemirror/lib/codemirror.css"> -->
+    <!-- <link rel="stylesheet" href="node_modules/code-mirror-themes/themes/railscasts.css"> -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="src/main.css">
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/semantic-ui/dist/semantic.js"></script>
+    <script src="bower_components/prism/prism.js"></script>
+    <script src="bower_components/prism/components/prism-python.js"></script>
+    <script src="bower_components/prism/plugins/highlight-keywords/prism-highlight-keywords.js"></script>
+    <script src="bower_components/prism/plugins/line-highlight/prism-line-highlight.js"></script>
+    <script src="bower_components/jquery.countdown/dist/jquery.countdown.js"></script>
+    <script src="src/index.js"></script>
+
+  </head>
+  <body>
+    <div class="ui grid">
+      <div class="one wide column"></div>
+      <div class="fourteen wide column">
+        <iframe src="https://trinket.io/embed/python/1e627afd19" width="100%" height="360" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+      </div>
+      <div class="one wide column"></div>
+    </div>
+    <div class="ui grid">
+      <div class="one wide column"></div>
+      <div id="left-panel" class="seven wide column">
+        <% include code %>
+      </div>
+      <div class="seven wide column">
+        <% include hint %>
+      </div>
+      <div class="one wide column"></div>
+    </div>
+  </body>
+</html>

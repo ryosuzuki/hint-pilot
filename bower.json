@@ -1,0 +1,20 @@
+{
+  "name": "pilot",
+  "version": "0.0.0",
+  "authors": [
+    "Ryo Suzuki <ryosuzk@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "semantic-ui": "~2.2.2",
+    "prism": "~1.5.1",
+    "jquery.countdown": "~2.1.0"
+  }
+}
