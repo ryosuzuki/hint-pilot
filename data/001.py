@@ -8,7 +8,11 @@ def repeated(f, n):
       g = compose1(f, g)
       i += 1
     return g
-def compose1(f, g):
-  def h(x):
-    return f(g(x))
-  return h
+
+def main():
+  """
+  repeated(square, 0)(5)
+  => 5
+  """
+  print(repeated(square, 0)(5))
+  #=> 25

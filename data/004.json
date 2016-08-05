@@ -1,0 +1,10 @@
+{
+  "category": "product",
+  "trinket": "4040d513d9",
+  "location": "There is a mistake in line 2",
+  "type": "repeated function should returns function, not value",
+  "syntax": "",
+  "name": "Check the variable total",
+  "data": "total = 0\ntotal = 0*term(k) -> 0",
+  "behavior": "total doesn’t change"
+}

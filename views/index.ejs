@@ -22,18 +22,20 @@
     <script src="bower_components/prism/plugins/highlight-keywords/prism-highlight-keywords.js"></script>
     <script src="bower_components/prism/plugins/line-highlight/prism-line-highlight.js"></script>
     <script src="bower_components/jquery.countdown/dist/jquery.countdown.js"></script>
+    <script src="bower_components/sticky-kit/jquery.sticky-kit.js"></script>
     <script src="src/index.js"></script>
 
   </head>
   <body>
     <div class="ui grid">
       <div class="one wide column"></div>
-      <div class="fourteen wide column">
-        <iframe src="https://trinket.io/embed/python/1e627afd19" width="100%" height="360" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+      <div id="console" class="fourteen wide column">
+        <iframe src="https://trinket.io/embed/python/<%= hint.trinket %>" width="100%" height="360" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        <a href="https://trinket.io/python/<%= hint.trinket %>" target="__blank">https://trinket.io/python/<%= hint.trinket %></a>
       </div>
       <div class="one wide column"></div>
     </div>
-    <div class="ui grid">
+    <div id="main" class="ui grid">
       <div class="one wide column"></div>
       <div id="left-panel" class="seven wide column">
         <% include code %>

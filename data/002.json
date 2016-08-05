@@ -1,10 +1,10 @@
 {
   "category": "repeated",
-  "trinket": "1e627afd19",
+  "trinket": "3a4108e940",
   "location": "There is a mistake in line 2",
   "type": "---",
   "syntax": "You’re missing n == 0 condition",
   "name": "Check the variable n",
   "data": "repeated(square, 3)(5) -> 25",
-  "behavior": "Consider repeated(square, 3), This function loops 3 times, but your code loops 2 times"
+  "behavior": "The function loops 3 times, but your code loops 2 times"
 }
