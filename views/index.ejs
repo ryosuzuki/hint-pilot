@@ -23,10 +23,27 @@
     <script src="bower_components/prism/plugins/line-highlight/prism-line-highlight.js"></script>
     <script src="bower_components/jquery.countdown/dist/jquery.countdown.js"></script>
     <script src="bower_components/sticky-kit/jquery.sticky-kit.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDZyt0kudlB1Rh2-cB1BDg7g10fbu1Xk7s",
+        authDomain: "autohint-pilot.firebaseapp.com",
+        databaseURL: "https://autohint-pilot.firebaseio.com",
+        storageBucket: "autohint-pilot.appspot.com",
+      };
+      firebase.initializeApp(config);
+    </script>
+
     <script src="src/index.js"></script>
 
   </head>
   <body>
+    <script>
+
+    </script>
+
     <div class="ui grid">
       <div class="one wide column"></div>
       <div id="console" class="fourteen wide column">
@@ -42,6 +59,8 @@
       </div>
       <div class="seven wide column">
         <% include hint %>
+        <% include pre %>
+        <% include question %>
       </div>
       <div class="one wide column"></div>
     </div>

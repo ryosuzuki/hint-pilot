@@ -2,10 +2,12 @@
   <h1>Hints</h1>
   <form action="" class="ui form">
     <div class="ui segment">
-      <b>Location:</b><br>
-      <pre><code class="language-"><%= hint.location %></code></pre>
+      <b>Hint (<span id="category"><%= topic %></span>):</b><br>
+      <pre><code class="language-"><%= hint[topic] %></code></pre>
+
       <div class="field">
-        <select name="" id="">
+        <label class="text">Is this hint useful?</label>
+        <select name="" id="useful">
           <option value="1">1 (Bad)</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -13,84 +15,27 @@
           <option value="5">5 (Good)</option>
         </select>
       </div>
-    </div>
-    <div class="ui segment">
-      <b>Type:</b><br>
-      <pre><code class="language-"><%= hint.type %></code></pre>
+
       <div class="field">
-        <select name="" id="">
-          <option value="1">1 (Bad)</option>
+        <label>Does this hint reveal too much?</label>
+        <select name="" id="reveal">
+          <option value="1">1 (Disagree)</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
-          <option value="5">5 (Good)</option>
+          <option value="5">5 (Agree)</option>
         </select>
       </div>
-    </div>
-    <div class="ui segment">
-      <b>Syntax:</b><br>
-      <pre><code class="language-"><%= hint.syntax %></code></pre>
+
       <div class="field">
-        <select name="" id="">
-          <option value="1">1 (Bad)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (Good)</option>
-        </select>
+        <textarea name="" id="reason" cols="30" rows="10" placeholder="Why do you think this hint is usefl or not?"></textarea>
       </div>
-    </div>
-    <div class="ui segment">
-      <b>Name:</b><br>
-      <pre><code class="language-"><%= hint.name %></code></pre>
       <div class="field">
-        <select name="" id="">
-          <option value="1">1 (Bad)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (Good)</option>
-        </select>
+        <button class="ui green button">Submit</button>
       </div>
+
     </div>
-    <div class="ui segment">
-      <b>Data:</b><br>
-      <pre><code class="language-"><%= hint.data %></code></pre>
-      <div class="field">
-        <select name="" id="">
-          <option value="1">1 (Bad)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (Good)</option>
-        </select>
-      </div>
-    </div>
-    <div class="ui segment">
-      <b>Behavior:</b><br>
-      <pre><code class="language-"><%= hint.behavior %></code></pre>
-      <div class="field">
-        <select name="" id="">
-          <option value="1">1 (Bad)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (Good)</option>
-        </select>
-      </div>
-    </div>
-    <textarea name="" id="" cols="30" rows="10"></textarea>
-    <button class="ui green button">Submit</button>
   </form>
 </div>
-
-<div id="question">
-  <h1>Instruction</h1>
-  <div class="text">
-    <%- question %>
-  </div>
-</div>
-
-
 
 

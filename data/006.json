@@ -1,0 +1,10 @@
+{
+  "category": "repeated",
+  "trinket": "4040d513d9",
+  "location": "There is a mistake in line 6",
+  "type": "---",
+  "syntax": "Update name expression of function h",
+  "name": "Check the name h",
+  "data": "e.g.) repeated(triple, 5)(1)\nIn the first iteration,\nrepeated function should take triple\nbut the current code take h",
+  "behavior": "repeated(f, n)\n->h\n->f(repeated(h, n-1)(x)\n->repeated(f, n)\n->h"
+}

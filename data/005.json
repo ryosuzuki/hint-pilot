@@ -1,0 +1,10 @@
+{
+  "category": "repeated",
+  "trinket": "4040d513d9",
+  "location": "There is a mistake in line 3",
+  "type": "repeated function should returns function, not value",
+  "syntax": "Update the name expression",
+  "name": "Check variable n",
+  "data": "e.g.) repeated(triple, 5)(1)\nn = 4 OK\nn = 3 OK\nn = 2 OK\nn = 1 OK\nn = 0: repeated should return identity\nbut the current code return 0",
+  "behavior": "---"
+}

@@ -3,13 +3,16 @@ const path = require('path')
 const fs = require('fs')
 const app = express()
 const marked = require('marked')
+const _ = require('lodash')
+const favicon = require('serve-favicon')
 
+app.use(favicon(__dirname + '/src/favicon.ico'))
 app.use(express.static(__dirname + '/dist'))
 app.use('/src', express.static(__dirname + '/src'))
 app.use('/bower_components', express.static(__dirname + '/bower_components'))
 
 app.set('view engine', 'ejs')
-app.use('/:id', function (req, res) {
+app.get('/:id', function (req, res) {
   const id = req.params.id
 
   var str = '' + id
@@ -18,16 +21,21 @@ app.use('/:id', function (req, res) {
 
   const code = fs.readFileSync('./data/'+uid+'.py')
   const hint = JSON.parse(fs.readFileSync('./data/'+uid+'.json'))
+
+  var categories = [ 'location', 'type', 'syntax', 'name', 'data', 'behavior']
+  var random = _.random(categories.length)
+  var topic = categories[random]
   var markdown = fs.readFileSync('./data/questions/'+hint.category+'.md', 'utf8')
   var question = marked(markdown)
-  res.render('index', { code: code, hint: hint, question: question })
+  res.render('index', { code: code, hint: hint, question: question, topic: topic })
 })
-app.use('/', function (req, res) {
-  const code = fs.readFileSync('./data/code-001.py')
-  const hint = JSON.parse(fs.readFileSync('./data/hints-001.json'))
-  const question = fs.readFileSync('./data/questions/repeated.py')
-  res.render('index', { code: code, hint: hint, question: question })
+app.get('/', function (req, res) {
+  res.send('It works!')
 })
+app.post('/pre', function (req, res) {
+  console.log(req)
+})
+
 
 const port = 3000
 

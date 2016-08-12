@@ -2,10 +2,6 @@
   display: none;
 }
 
-#hint {
-  display: none;
-}
-
 #question code {
   background: #f5f2f0;
   color: #DD4A68;
